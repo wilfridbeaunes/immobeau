@@ -1,0 +1,48 @@
+.st-h{
+    margin-top: 2%;
+}
+
+.div-size{
+    width: 25rem
+}
+
+.centered-element {
+    margin: auto;
+    background-color: none;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: auto;
+    justify-content: auto;
+}
+
+.separator {
+    border-top: 1px solid #bbb;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.bold-m{
+    font-weight: 524;
+}
+
+.ut{
+    text-decoration: none;
+}
+
+.imageResize{
+    width: 10%;
+    height: 10%;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
