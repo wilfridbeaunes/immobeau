@@ -9,13 +9,20 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { ScheduleModule,RecurrenceEditorModule,DayService, WeekService,MonthService,AgendaService } from '@syncfusion/ej2-angular-schedule';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    InvoiceComponent,
+    CalendarComponent
     
   ],
   imports: [
@@ -24,9 +31,12 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule,
+    // ScheduleModule, 
+    // RecurrenceEditorModule
   ],
-  providers: [],
+  // providers: [DayService, WeekService, MonthService, AgendaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
