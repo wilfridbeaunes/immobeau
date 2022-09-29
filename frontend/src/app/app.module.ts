@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { CalendarComponent } from './calendar/calendar.component';
-import { ScheduleModule,RecurrenceEditorModule,DayService, WeekService,MonthService,AgendaService } from '@syncfusion/ej2-angular-schedule';
+// import { ScheduleModule,RecurrenceEditorModule,DayService, WeekService,MonthService,AgendaService } from '@syncfusion/ej2-angular-schedule';
 
 
 @NgModule({
