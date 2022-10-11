@@ -12,7 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { CalendarComponent } from './calendar/calendar.component';
-// import { ScheduleModule,RecurrenceEditorModule,DayService, WeekService,MonthService,AgendaService } from '@syncfusion/ej2-angular-schedule';
+
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { FlatpickrModule } from 'angularx-flatpickr';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -33,10 +37,12 @@ import { CalendarComponent } from './calendar/calendar.component';
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    // ScheduleModule, 
-    // RecurrenceEditorModule
+    NgbModalModule,
+    FlatpickrModule.forRoot(),
+    CalendarModule.forRoot({provide: DateAdapter,useFactory: adapterFactory,}),
+
   ],
-  // providers: [DayService, WeekService, MonthService, AgendaService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
