@@ -93,7 +93,7 @@
   </div>
   
   <br /><br /><br />
-  <div>
+  <div class="W-size-2">
     <h3>
       Edit events
       <button class="btn btn-primary float-end" (click)="addEvent()">
@@ -102,19 +102,15 @@
       <div class="clearfix"></div>
     </h3>
   </div>
-  
 
-  <!-- Everything you see below is just for the demo, you don't need to include it in your app -->
-
-  <div class="table-responsive">
+  <div class="table-responsive W-size">
     <table class="table table-bordered">
       <thead>
         <tr>
           <th>Title</th>
           <th>Primary color</th>
-          <th>Secondary + text color</th>
           <th>Starts at</th>
-          <th>Ends at</th>
+          <!-- <th>Ends at</th> -->
           <th>Remove</th>
         </tr>
       </thead>
@@ -132,24 +128,12 @@
           <td>
             <input
               type="color"
+              *ngIf="event.color"
               [(ngModel)]="event.color.primary"
               (change)="refresh.next()"
             />
-          </td>
+          </td> 
           <!-- <td>
-            <input
-              type="color"
-              [(ngModel)]="event.color?.secondary"
-              (change)="refresh.next()"
-            />
-            <input
-              type="color"
-              [ngModel]="event.color?.secondaryText ?? '#1e90ff'"
-              (ngModelChange)="event.color?.secondaryText = $event"
-              (change)="refresh.next()"
-            />
-          </td> -->
-          <td>
             <input
               class="form-control"
               type="text"
@@ -163,7 +147,7 @@
               altFormat="F j, Y H:i"
               placeholder="Not set"
             />
-          </td>
+          </td> -->
           <td>
             <input
               class="form-control"

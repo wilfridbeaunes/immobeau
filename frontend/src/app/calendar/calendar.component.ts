@@ -44,7 +44,8 @@ const colors: Record<string, EventColor> = {
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.css',]
+  styleUrls: ['./calendar.component.css',],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class CalendarComponent implements OnInit {
@@ -195,8 +196,6 @@ export class CalendarComponent implements OnInit {
   closeOpenMonthViewDay() {
     this.activeDayIsOpen = false;
   }
-
-
 
 }
 
