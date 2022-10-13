@@ -1,10 +1,16 @@
-.h3 {
+/* .h3 {
     margin: 0 0 20px;
 }
 
 .pre {
     background-color: #f5f5f5;
     padding: 15px;
+} */
+
+.W-d {
+    margin: 0 auto;
+    width: 900%;
+    max-width: 95%;
 }
 
 .W-size {
