@@ -26,7 +26,6 @@ export class RegisterComponent implements OnInit {
     private AuthService: AuthService) { }
   
   ngOnInit(): void {
-
     //name of fields i want to get the values 
     this.myForm = this.fb.group({
       firstName: ['', Validators.required], 
@@ -60,6 +59,7 @@ export class RegisterComponent implements OnInit {
         lastName: formData.lastName,
         role: this.role
       }
+      console.log(data);
       //send the data to the backend to create a new user
       this.AuthService.registerUser(data).then((res: any) => {
         console.log(res);

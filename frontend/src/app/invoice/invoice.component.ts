@@ -10,36 +10,58 @@ import html2canvas from 'html2canvas';
 export class InvoiceComponent implements OnInit {
 
   @ViewChild('htmlData') htmlData!: ElementRef;
-  USERS = [
-    {
-      id: 1,
-      name: 'Leanne Graham',
-      email: 'sincere@april.biz',
-      phone: '1-770-736-8031 x56442',
-    },
-    {
-      id: 2,
-      name: 'Ervin Howell',
-      email: 'shanna@melissa.tv',
-      phone: '010-692-6593 x09125',
-    },
-    {
-      id: 3,
-      name: 'Clementine Bauch',
-      email: 'nathan@yesenia.net',
-      phone: '1-463-123-4447',
-    },
-  ];
+  invoice_data= [{
+    USER :
+      {
+        id:1,
+        first_name: 'Jamil',
+        last_name: 'ASGHAR JAN',
+        second:{
+          id:1,
+          first_name: 'Shabana',
+          last_name: 'AFSHAN',
+        }
+      },
+    OWNER:{
+      id:1,
+      first_name: 'Nadine',
+      last_name: 'MAWAMBA',
+      street: '5 Route de Montereau',
+      post_code: '77130',
+      city: 'MAROLLES-SUR-SEINE',
+      country: 'FRANCE',
+      phone: '0628612273',
+    } ,
+    HOUSE:{
+      id:1,
+      street: '27 avenue du général de gaulle',
+      post_code: '77210',
+      city: 'AVON',
+      details: 'Bâtiment F18',
+      country: 'FRANCE',
+    },  
+    INVOICE :{
+      id:1,
+      loyer:{
+        loyerHC: 682.81,
+        charge: 200,
+      },
+      unpay_total: 0,
+      date_start: '06.10.2022',
+      date_end: '05.11.2022',
+      date_pay: '05.11.2022',
+    }
+  }];
 
-  public openPDF(): void {
+  public downloadPDF(): void {
     let DATA: any = document.getElementById('htmlData');
       html2canvas(DATA).then((canvas) => {
-      let fileWidth = 208;
+      let fileWidth = 228;
       let fileHeight = (canvas.height * fileWidth) / canvas.width;
-      const FILEURI = canvas.toDataURL('image/png');
+      const FILEURI = canvas.toDataURL('image/jpeg');
       let PDF = new jsPDF('p', 'mm', 'a4');
       let position = 0;
-      PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight);
+      PDF.addImage(FILEURI, 'JPEG', 0, position, fileWidth, fileHeight);
       PDF.save('angular-demo.pdf');
     });
   }
@@ -47,26 +69,6 @@ export class InvoiceComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  //fonction to generate the receipt
-  generateReciept() {
-    console.log('generateReciept()');
-  }
-
-//fonction to send the Reciept by email
-  sendReciept() {
-    console.log('sendReciept()');
-  }
-
-  //fonction to generate the invoice
-  generateInvoice() {
-    console.log('generateInvoice()');
-  }
-
-  //fonction to send the invoice by email
-  sendInvoice() {
-    console.log('sendInvoice()');
   }
 
 }

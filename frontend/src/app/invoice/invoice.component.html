@@ -1,93 +1,40 @@
-<head>
-<title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
- <br/>
-<style type="text/css">
-<!--
-	p {margin: 0; padding: 0;}	.ft10{font-size:14px;font-family:Times;color:#000000;}
-	.ft11{font-size:14px;font-family:Times;color:#000000;}
-	.ft12{font-size:20px;font-family:Times;color:#000000;}
-	.ft13{font-size:20px;font-family:Times;color:#ffffff;}
-	.ft14{font-size:14px;line-height:20px;font-family:Times;color:#000000;}
-	.ft15{font-size:14px;line-height:21px;font-family:Times;color:#000000;}
-	.ft16{font-size:14px;line-height:21px;font-family:Times;color:#000000;}
-	.ft17{font-size:14px;line-height:22px;font-family:Times;color:#000000;}
--->
-</style>
-</head>
-
-<body bgcolor="#A0A0A0" vlink="blue" link="blue">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9" id="htmlData">
-        <div id="page1-div" style="position:relative;width:892px;height:1262px;">
+<div class="container">
+  <div class="row">
+    <div class="col-md-9" id="htmlData">
+      <div id="page1-div" style="position:relative;width:892px;height:1262px;">
+        <div *ngFor="let data of invoice_data">
             <img width="892" height="1262" src="assets/cardre_quittance.png" alt="background image"/>
-            <p style="position:absolute;top:57px;left:107px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:57px;left:446px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:57px;left:785px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:77px;left:108px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:1152px;left:434px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:1172px;left:108px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:1172px;left:459px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:1172px;left:777px;white-space:nowrap" class="ft10"> 1 </p> 
-            <p style="position:absolute;top:1192px;left:108px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:1192px;left:459px;white-space:nowrap" class="ft10"> </p>
+            <p style="position:absolute;top:340px;left:384px;white-space:nowrap" class="ft12"><b>QUITTANCE</b></p>
             <p style="position:absolute;top:111px;left:108px;white-space:nowrap" class="ft11"><b>PROPRIETAIRE BAILLEUR</b></p>
-            <p style="position:absolute;top:145px;left:108px;white-space:nowrap" class="ft14">Nadine MAWAMBA <br/>5 Route de Montereau <br/>77130 MAROLLES-SUR-SEINE <br/>FRANCE <br/>0628612273  <br/> <br/> </p>
-            <p style="position:absolute;top:300px;left:108px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:333px;left:108px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:367px;left:108px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:401px;left:108px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:435px;left:108px;white-space:nowrap" class="ft10">Reçu de : <b>ASGHAR JAN Jamil et AFSHAN Shabana</b> </p>
-            <p style="position:absolute;top:468px;left:108px;white-space:nowrap" class="ft10">La somme de :  <b>882,81 €</b> </p>
-            <p style="position:absolute;top:502px;left:108px;white-space:nowrap" class="ft10">En date du : <b>06 sept. 2022</b> </p>
-            <p style="position:absolute;top:536px;left:108px;white-space:nowrap" class="ft16">Pour le loyer et accessoires de l'appartement situé au <b>27 avenue du général de gaulle 77210 AVON <br/>bâtiment F18 <br/></b> <br/>En paiement du terme du <b>06.10.2022 au 05.11.2022</b> </p>
-            <p style="position:absolute;top:635px;left:108px;white-space:nowrap" class="ft10">Détail </p>
-            <p style="position:absolute;top:665px;left:135px;white-space:nowrap" class="ft17">•  Loyer HC : <b>682.81 €</b> <br/>•  Charges : <b>200.00 €</b> </p>
-            <p style="position:absolute;top:726px;left:108px;white-space:nowrap" class="ft10">Montant total du terme : <b>882,81 €</b> </p>
-            <p style="position:absolute;top:756px;left:135px;white-space:nowrap" class="ft17">•  Paiement locataire : <b>882,81 €</b> <br/>•  Solde à payer : <b>0.00 €</b> </p>
-            <p style="position:absolute;top:817px;left:108px;white-space:nowrap" class="ft10"> </p>
+            <p style="position:absolute;top:145px;left:108px;white-space:nowrap" class="ft14">{{data.OWNER.first_name | titlecase}} {{data.OWNER.last_name | uppercase}}<br/>{{data.OWNER.street}}<br/>{{data.OWNER.post_code}} {{data.OWNER.city | uppercase}}<br/>{{data.OWNER.country | uppercase}}<br/>{{data.OWNER.phone}}<br/><br/></p>
             <p style="position:absolute;top:172px;left:530px;white-space:nowrap" class="ft11"><b>LOCATAIRE DESTINATAIRE </b></p>
-            <p style="position:absolute;top:206px;left:530px;white-space:nowrap" class="ft16">ASGHAR JAN Jamil et AFSHAN Shabana <br/>27 avenue du général de gaulle  <br/>77210 AVON <br/>Bât F18  <br/>FRANCE <br/> </p>
-            <p style="position:absolute;top:335px;left:384px;white-space:nowrap" class="ft12"><b>QUITTANCE</b></p>
-            <p style="position:absolute;top:342px;left:494px;white-space:nowrap" class="ft13">  </p>
-            <p style="position:absolute;top:857px;left:558px;white-space:nowrap" class="ft10">Fait à Marolles-sur-seine, le 05.10.22 </p>
-            <p style="position:absolute;top:891px;left:558px;white-space:nowrap" class="ft10">Nadine MAWAMBA </p>
-            <p style="position:absolute;top:924px;left:558px;white-space:nowrap" class="ft10"> </p>
-            <p style="position:absolute;top:958px;left:558px;white-space:nowrap" class="ft10"> </p>
-          </div>
-        </div>
-        <div class="col order-last">
-          <div style="position:absolute;top:335px;left:1190px">
-            <button class="btn btn-success btn-block" (click)="openPDF()">Télécharger PDF</button>
+            <div *ngIf="data.USER.second.first_name!=''; else no_second_user">
+              <p style="position:absolute;top:435px;left:108px;white-space:nowrap" class="ft10">Reçu de : <b> {{data.USER.first_name | titlecase}} {{data.USER.last_name | uppercase}} et {{data.USER.second.first_name | titlecase}} {{data.USER.second.last_name | uppercase}}</b></p>
+              <p style="position:absolute;top:206px;left:530px;white-space:nowrap" class="ft16">{{data.USER.first_name | titlecase}} {{data.USER.last_name | uppercase}} et {{data.USER.second.first_name | titlecase}} {{data.USER.second.last_name | uppercase}} <br/>{{data.HOUSE.street}}<br/>{{data.HOUSE.post_code}} {{data.HOUSE.city | uppercase}}<br/>{{data.HOUSE.details}}<br/>{{data.HOUSE.country | uppercase}}<br/> </p>
+            </div>
+            <ng-template #no_second_user>
+              <p style="position:absolute;top:435px;left:108px;white-space:nowrap" class="ft10">Reçu de : <b> {{data.USER.first_name | titlecase}} {{data.USER.last_name | uppercase}}</b></p>
+              <p style="position:absolute;top:206px;left:530px;white-space:nowrap" class="ft16">{{data.USER.first_name | titlecase}} {{data.USER.last_name | uppercase}} <br/>{{data.HOUSE.street}}<br/>{{data.HOUSE.post_code}} {{data.HOUSE.city | uppercase}}<br/>{{data.HOUSE.details}}<br/>{{data.HOUSE.country | uppercase}}<br/> </p>
+            </ng-template>
+            <p style="position:absolute;top:468px;left:108px;white-space:nowrap" class="ft10">La somme de :  <b> {{data.INVOICE.loyer.loyerHC + data.INVOICE.loyer.charge}} €</b> </p>
+            <p style="position:absolute;top:502px;left:108px;white-space:nowrap" class="ft10">En date du : <b>{{data.INVOICE.date_pay}}</b> </p>
+            <p style="position:absolute;top:536px;left:108px;white-space:nowrap" class="ft16">Pour le loyer et accessoires de l'appartement situé au <b>{{data.HOUSE.street}} {{data.HOUSE.post_code}} {{data.HOUSE.city | uppercase}} <br/>{{data.HOUSE.details}}<br/></b> <br/>En paiement du terme du <b>{{data.INVOICE.date_start}} au {{data.INVOICE.date_end}}</b></p>
+            <p style="position:absolute;top:635px;left:108px;white-space:nowrap" class="ft10">Détail </p>
+            <p style="position:absolute;top:665px;left:135px;white-space:nowrap" class="ft17">•  Loyer HC : <b>{{data.INVOICE.loyer.loyerHC}} €</b> <br/>•  Charges : <b>{{data.INVOICE.loyer.charge}} €</b> </p>
+            <p style="position:absolute;top:726px;left:108px;white-space:nowrap" class="ft10">Montant total du terme : <b>{{data.INVOICE.loyer.loyerHC + data.INVOICE.loyer.charge + data.INVOICE.unpay_total}} €</b> </p>
+            <p style="position:absolute;top:756px;left:135px;white-space:nowrap" class="ft17">•  Paiement locataire : <b>{{data.INVOICE.loyer.loyerHC + data.INVOICE.loyer.charge}} €</b> <br/>•  Solde à payer : <b>{{data.INVOICE.unpay_total }} €</b> </p>
+            <p style="position:absolute;top:857px;left:558px;white-space:nowrap" class="ft10">Fait à {{data.OWNER.city | titlecase}}, le {{data.INVOICE.date_pay}}</p>
+            <p style="position:absolute;top:891px;left:558px;white-space:nowrap" class="ft10">{{data.OWNER.first_name | titlecase}} {{data.OWNER.last_name | uppercase}}</p>
+            <img style="position:absolute;top:935px;left:558px;white-space:nowrap" class="ft10" width="192" height="142" src="assets/signature_quittance.png"/>
+            <p style="position:absolute;top:1172px;left:777px;white-space:nowrap" class="ft10"> 1 </p> 
           </div>
         </div>
       </div>
-  </div>
-</body>
-
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-md-8" id="htmlData">
-      <table class="table table-bordered">
-        <tr class="table-primary">
-          <th>Id</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-        </tr>
-        <tr *ngFor="let user of USERS">
-          <th>{{user.id}}</th>
-          <td>{{user.name}}</td>
-          <td>{{user.email}}</td>
-          <td>{{user.phone}}</td>
-        </tr>
-      </table>
+      <div class="col order-last">
+        <div style="position:absolute;top:335px;left:1250px">
+          <button class="btn btn-primary btn-block" (click)="downloadPDF()">Télécharger PDF</button>
+        </div>
+      </div>
     </div>
-    <div class="col-md-4 text-right">
-      <button class="btn btn-success btn-block" (click)="openPDF()">Download PDF</button>
-    </div>
-  </div>
-</div> -->
+</div>

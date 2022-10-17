@@ -44,7 +44,7 @@
                     </div>
                     <div class="col">
                         <div class="input-group has-validation">
-                            <input type="text" class="form-control" formControlName="lastName" placeholder="Nom" id="lastName" 
+                            <input type="text" class="form-control" formControlName="lastName"style="text-transform:uppercase" placeholder="Nom" id="lastName" 
                             [ngClass]="{'is-invalid': personalSubmitted && personal.lastName.errors}" required>
                             <div *ngIf="personalSubmitted" class="invalid-feedback">
                                 <div *ngIf="personal.lastName.errors?.required">Le nom est obligatoire</div>
